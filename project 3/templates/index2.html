@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+<title>home</title>
+
+{% endblock head %}
+
+
+
+{% block main %}
+
+
+  
+<br>
+<br> 
+<center><h1 style='text-transform: uppercase;'>{{prod.0.subcategory}}</h1></center> 
+<br>
+
+<div>
+
+
+
+    <h3 class="my-3 text-center text-dark bg-light" style='text-transform: uppercase;'>{{prod.0.category}}</h3>
+
+    <div class="container">
+        <div class="row">
+            {% for i in prod %}
+            <div class="col-md-3 mt-3">
+                <img src="{{i.image_link}}" class="product-img" alt="" style='object-position:top;'>
+                <div class="card-body">
+                    <h5 class="card-title" id="namepr{{i.id}}">{{i.product_name}}</h5> 
+                    <p class="card-text" style='height:5vw;overflow:hidden;'>{{i.desc|slice:"0:53"}}...</p>
+                    <h6 class="card-title">Price:<span id="pricepr{{i.id}}"><b>{{i.price}}</b></span></h6>
+                    <span id="divpr{{i.id}}" class="divpr">
+                        {% comment %} <button id="pr{{i.id}}" class="btn cart btn-sm mt-0">Add to cart</button> {% endcomment %}
+                    </span>
+                    <a href="/view/{{i.product_id}}"><button class="btn cart"><i class="fa-solid fa-eye text-white"></i> View </button></a>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock main %}
+
+{% block js %}
+
+<script>
+
+</script>
+{% endblock js %}
+
+    

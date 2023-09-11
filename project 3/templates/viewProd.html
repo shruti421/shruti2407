@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+<title>home</title>
+
+{% endblock head %}
+
+
+
+{% block main %}
+
+
+<div class="row m-2 mt-3">
+<div class="col-md-7" style='overflow: hidden;display: flex;'>
+     <img id='prd-img' src="{{prod.image_link}}" alt="" style='width:28vw;height:45vw;object-fit:cover;' class='p-1'>
+     <img src="{{prod.image_link2}}" alt="" style='width:28vw;height:45vw;object-fit:cover;' class='p-1'>
+</div>
+
+<div class="col-md-4">
+    <h2 class="card-title fw-bold" id="name{{prod.product_id}}">{{prod.product_name}}</h2> 
+    
+    <p class="card-text" id='prod'>{{prod.desc}}</p>
+    
+    <button id="{{prod.product_id}}" class="btn btn-lg cart"><i class="fa-solid fa-bag-shopping text-white"> </i> Add to bag</button>
+    
+    <a href=""><button class="btn btn-lg btn-light"> <i class="fa-regular fa-heart text-dark"> </i> Wish list </button></a>
+    <br><br>
+    <h4>Rs.{{prod.price}}</h4>
+    <h5>MRP:{{prod.price|add:400}}</h5>
+
+
+
+</div>
+</div>
+
+
+
+
+{% endblock main %}
+
+{% block js %}
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous">
+</script>
+
+  
+<script>
+
+
+    $('.cart').click(function() {   
+        var idstr = this.id.toString();
+        var idstr2 = this.id.toString();
+
+        idstr = document.getElementById('name'+idstr).innerHTML
+        var idstr2 = idstr2
+        
+        prodImg = document.getElementById('prd-img').src
+        prodDesc = document.getElementById('prod').innerHTML
+
+        if (cart[idstr] != undefined){
+            cart[idstr]=cart[idstr]+1;
+            cart2[idstr2]=[cart[idstr],document.getElementById('name'+idstr2).innerHTML,prodImg,prodDesc]
+           
+        }
+        else{
+            cart[idstr]=1;
+            cart2[idstr2]=[1,document.getElementById('name'+idstr2).innerHTML,prodImg,prodDesc]
+        }
+
+    updateTotalItem();
+    
+    updatePopover(cart);
+
+    console.log(cart2)
+    for (let x in cart2){
+        console.log(cart2[x])
+    }
+
+    })
+
+    
+
+</script>
+
+{% endblock js %}

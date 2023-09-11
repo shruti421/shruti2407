@@ -1,0 +1,12 @@
+.product-img{
+    width: 16vw;
+    height: 16vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cart{
+    background-color:#ff3e6c;
+    color: white;
+}
+

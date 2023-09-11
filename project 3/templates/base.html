@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <script src="https://kit.fontawesome.com/a6ad6d7170.js" crossorigin="anonymous"></script>
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+    {% block head %}
+    <title>Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra</title>
+    
+    {% endblock head %}
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light px-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://gumlet.assettype.com/afaqs%2F2021-01%2F15f5f827-8e29-4520-af8d-a0f353b8da17%2Fimages.png?auto=format%2Ccompress&w=1200" style='height:50px;' alt="">
+
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex mx-4">
+              <input class="form-control me-2" type="search" placeholder="Search for products, brand and more" aria-label="Search" style='width:400px;'>
+            </form>
+
+            <button id='popcart' type="button" class="btn btn-lg bg-myn" data-bs-toggle="popover" data-bs-html='true' data-html='true' title="Cart Items" data-bs-content="these are the items you added">Bag(<span id='cart'>0</span>)</button>
+
+          </div>
+        </div>
+      </nav>
+
+      <!-- <header class="containerHeader">
+        <nav class="flexy space-between">
+            
+            <div class="left flexy items-center">
+                <img src="https://gumlet.assettype.com/afaqs%2F2021-01%2F15f5f827-8e29-4520-af8d-a0f353b8da17%2Fimages.png?auto=format%2Ccompress&w=1200" alt="">
+                <ul class="flexy items-center justify-center uppercase semibold">
+                    
+                    <li><a class='item-link' href="/index2/laptops">Laptos</a></li>
+                    <li><a class='item-link' href="">Women</a></li>
+                    <li><a class='item-link' href="">Kids</a></li>
+                    <li><a class='item-link' href="">Home and Living</a></li>
+                    <li><a class='item-link' href="">Beauty</a></li>
+                    <li><a class='item-link' href="">Studio</a></li>
+
+                </ul>
+            </div>
+            <div class="right flexy items-center">
+                <input class="search" placeholder="Search for products, brands and more" class="desktop-searchBar" value="" data-reactid="904">
+                <div class="rightBox">
+                <div class="profile mx-2"> Profile</div>
+                <div class="wishlist mx-2">WishList</div>
+                <div class="bag mx-2">
+                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                        cart
+                    </button>
+                    Bag(<span id='cart'>0</span>) 
+                </div>
+                </div>
+            </div>
+            
+
+            
+
+        </nav>
+    </header> -->
+
+    <!-- <input value='empty' type="text" id='my-bag'> -->
+
+    {% block main %}
+    
+    
+
+
+
+    <center><h1 class="m-4 fw-bold"><i>SHOP BY CATEGORY</i></h1></center>
+    <section class="section1 ">
+        
+        <div class="flexy" id="sc-1">
+            <a href="/index2/ethnic-wear"><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/b398cd4d-962a-44c5-9981-881feeefcf241693829322273-Shop-By-Category_HP_02.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/bc3e9ae5-a257-45c2-be69-e4445e7934031693829322380-Shop-By-Category_HP_03.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/3bf21268-53ca-45b1-baed-f4d4eda6f4321693829321721-Shop-By-Category_HP_04.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/f0d3f0f1-4e77-489c-8f19-800633a44f061693829322063-Shop-By-Category_HP_05.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/d1e66113-3215-4d90-b527-c7fbf4b512f61693829321908-Shop-By-Category_HP_06.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/59bbd2a3-699f-4a70-8b51-b210e7cbf91b1693829321986-Shop-By-Category_HP_07.jpg" alt=""/></a>
+        </div>      
+        <div class="flexy" id="sc-2">
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/40c480d1-ebc8-4779-bf35-2f66ac4bd9181693829321772-Shop-By-Category_HP_08.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/4a6297a8-de7f-4468-9b65-d91f409ad3351693829322461-Shop-By-Category_HP_09.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/f0aa4cc0-6db3-4225-a0f6-666a19eeb6991693829321832-Shop-By-Category_HP_10.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/25c181d9-f3b6-4580-af3c-5ff4e03e382d1693829321690-Shop-By-Category_HP_11.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/bde4f409-ff0b-4278-ba27-867cb6bde5ca1693829322325-Shop-By-Category_HP_12.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/2e06614b-4772-4084-99e8-bae5119bbd001693829322221-Shop-By-Category_HP_13.jpg" alt=""/></a>
+
+        </div>      
+        <div class="flexy" id="sc-3">
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/21c253f9-dedf-47f9-b519-6e83d26e56661693829322297-Shop-By-Category_HP_14.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/1368a69f-0fb7-4f1f-941b-9854ae6421ed1693829322090-Shop-By-Category_HP_15.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/c006fc3e-9106-4719-9d0a-faaddcd0199c1693829322560-Shop-By-Category_HP_16.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/98350a39-44da-4578-90b8-0ace5efce4aa1693829322116-Shop-By-Category_HP_17.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/7992b573-b7fe-4ec2-b65a-f0503bc432d31693829322143-Shop-By-Category_HP_18.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/e2a1dd10-41b4-4cef-b027-da394dcf9def1693829322013-Shop-By-Category_HP_19.jpg" alt=""/></a>
+        </div>      
+        <div class="flexy" id="sc-4">
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/5167131a-d391-4d2c-bf1a-2adfa0140b0e1693829321748-Shop-By-Category_HP_26.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/0b8efd44-dedd-439e-ba95-f2791616d7e61693829321662-Shop-By-Category_HP_27.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/c0873c43-d3b6-4dc9-94d2-b55bd3d96f5b1693829321804-Shop-By-Category_HP_28.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/ceb35fed-8a24-4958-9e0b-bb6d34cae4a51693829322434-Shop-By-Category_HP_29.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/a5feb4c2-9dd8-4045-b5c9-1cf1d32595981693829322408-Shop-By-Category_HP_30.jpg" alt=""/></a>
+            <a href=""><img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/9/4/20fe9b62-a63a-4d27-9058-61564b0922a71693829322512-Shop-By-Category_HP_31.jpg" alt=""/></a>
+
+        </div>      
+        
+
+    </section>
+    
+
+
+    <h1 class="m-3 fw-bold">RAKSHABANNDHAN GIFTS THIS WAY</h1>
+
+    <section class="section1">
+        
+        <div class="flexy" id="sc1-1">
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/7a54591c-5afa-4b05-966b-4b657051095d1690609816941-Get_Kurta_Sets_under_1299_-2299-_from_Vishudh-_Inddus_-more.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/512d3004-436e-413b-94fc-71d941b4bf141690609817830-USPA-_FM_Min_60.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/17688c67-f5a8-4da6-ab55-e0294557111c1690609817449-Puma_Min_50_off.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/41177b31-b72e-4207-b0e2-ba4c34ff95521690609817536-Shirts_Min_60-_M-H-_H-N_-_More.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/66263256-8ab0-4dc0-98c6-8a475c6eb56e1690609817802-Tshirts_Starting_199_-499-_M-H-_Moda_-_More.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/a27c2cf2-e940-4f7e-ad63-e194a6fff1801690609817228-Mens_Ethnic_Styles_Min_65_Off-_Sojanya-_Deyaan_-_More.png" alt=""/>
+        </div>      
+        <div class="flexy" id="sc1-2">
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/41177b31-b72e-4207-b0e2-ba4c34ff95521690609817536-Shirts_Min_60-_M-H-_H-N_-_More.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/66263256-8ab0-4dc0-98c6-8a475c6eb56e1690609817802-Tshirts_Starting_199_-499-_M-H-_Moda_-_More.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/a27c2cf2-e940-4f7e-ad63-e194a6fff1801690609817228-Mens_Ethnic_Styles_Min_65_Off-_Sojanya-_Deyaan_-_More.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/7a54591c-5afa-4b05-966b-4b657051095d1690609816941-Get_Kurta_Sets_under_1299_-2299-_from_Vishudh-_Inddus_-more.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/512d3004-436e-413b-94fc-71d941b4bf141690609817830-USPA-_FM_Min_60.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/17688c67-f5a8-4da6-ab55-e0294557111c1690609817449-Puma_Min_50_off.png" alt=""/>
+
+        </div>      
+        <div class="flexy" id="sc1-3">
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/7a54591c-5afa-4b05-966b-4b657051095d1690609816941-Get_Kurta_Sets_under_1299_-2299-_from_Vishudh-_Inddus_-more.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/512d3004-436e-413b-94fc-71d941b4bf141690609817830-USPA-_FM_Min_60.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/17688c67-f5a8-4da6-ab55-e0294557111c1690609817449-Puma_Min_50_off.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/41177b31-b72e-4207-b0e2-ba4c34ff95521690609817536-Shirts_Min_60-_M-H-_H-N_-_More.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/66263256-8ab0-4dc0-98c6-8a475c6eb56e1690609817802-Tshirts_Starting_199_-499-_M-H-_Moda_-_More.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/a27c2cf2-e940-4f7e-ad63-e194a6fff1801690609817228-Mens_Ethnic_Styles_Min_65_Off-_Sojanya-_Deyaan_-_More.png" alt=""/>
+        </div>      
+        <div class="flexy" id="sc1-4">
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/41177b31-b72e-4207-b0e2-ba4c34ff95521690609817536-Shirts_Min_60-_M-H-_H-N_-_More.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/66263256-8ab0-4dc0-98c6-8a475c6eb56e1690609817802-Tshirts_Starting_199_-499-_M-H-_Moda_-_More.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/a27c2cf2-e940-4f7e-ad63-e194a6fff1801690609817228-Mens_Ethnic_Styles_Min_65_Off-_Sojanya-_Deyaan_-_More.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/7a54591c-5afa-4b05-966b-4b657051095d1690609816941-Get_Kurta_Sets_under_1299_-2299-_from_Vishudh-_Inddus_-more.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/512d3004-436e-413b-94fc-71d941b4bf141690609817830-USPA-_FM_Min_60.png" alt=""/>
+            <img class="itemImg" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/29/17688c67-f5a8-4da6-ab55-e0294557111c1690609817449-Puma_Min_50_off.png" alt=""/>
+
+        </div>      
+        
+
+    </section>
+    
+    
+    
+
+    <section>
+
+        <h1 class="m-3 fw-bold">Shop by Category</h1>
+
+    
+        <div class="cat-cont">
+
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+            <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/31/dd262b36-3a75-464a-97b5-235984080d851690787338916-Shop-By-Category_HP-4_11.jpg" class="cat-img" alt="">
+
+
+        </div>
+
+           
+
+          
+
+    </section>
+
+    <section class="tall">
+        
+    </section>
+
+    {% endblock main %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    <script src="{% static 'js/script.js' %}"></script>
+
+    <script>
+        
+    var popover = new bootstrap.Popover(document.querySelector('#popcart'), {
+        container: 'body'
+      })
+
+
+
+    
+
+    </script>
+
+    <footer>
+        Copyright &copy; myntra.com || All rights reserved
+
+
+    </footer>
+
+    
+        
+    {% block js %}
+   
+    {% endblock js %}
+
+    <script>
+
+        if(localStorage.getItem('cart')==null){
+            var cart = {};
+        }else{
+            cart = JSON.parse(localStorage.getItem('cart'));
+            document.getElementById('cart').innerHTML = Object.keys(cart).length;
+        }
+
+        if(localStorage.getItem('cart2')==null){
+            var cart2 = {};
+        }else{
+            cart2 = JSON.parse(localStorage.getItem('cart2'));
+        }
+
+
+    
+        updateTotalItem();
+        updatePopover(cart);
+    
+        function updateTotalItem(){
+            var cartItems = '';
+            var totalItem = 0;
+            
+            for (let item in cart){
+                cartItems = cartItems+' Id:'+item.slice(2,) + " Qty:" +cart[item];
+                totalItem = totalItem + cart[item];
+            }
+    
+            //document.getElementById('my-bag').value = cartItems;
+            localStorage.setItem('cart',JSON.stringify(cart));
+            localStorage.setItem('cart2',JSON.stringify(cart2));
+            // document.getElementById('cart').innerHTML = Object.keys(cart).length;
+            document.getElementById('cart').innerHTML = totalItem;
+
+    
+        }
+
+        function updatePopover(cart)
+        {   var popStr = "";
+            popStr = popStr + "<h5> Here's the items you pick </h5><div class='mx-2 my-2'>";
+            var i = 1;
+            for (var item in cart){
+                popStr = popStr + "<b>" + i + "</b>. ";
+
+                popStr = popStr + item + " Qty: " + cart[item] + '<br>';
+                i = i+1;
+            }
+            popStr = popStr + "</div><a href='/myBag' id='clrCart' class='btn btn-primary'>Checkout</a>" 
+
+            document.getElementById('popcart').setAttribute('data-bs-content', popStr);
+            
+        }
+
+        console.log(document.querySelector('#clrCart'))
+
+
+        
+        //document.getElementById('clrCart').addEventListener('click',function(){
+           // localStorage.clear();
+           //console.log('clear')
+
+        //}) 
+
+    </script>
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block main %}
+
+
+<div class="container" id='tingoo'>
+
+  <h2>No item added to Bag !!</h2>
+
+</div>
+<div class='container m-5'>
+  <button class='btn btn-danger' onclick='clrCart()'>Clear cart</button>
+</div>
+{% endblock main %}
+
+{% block js %}
+
+<script>
+
+    cart2 = JSON.parse(localStorage.getItem('cart2'));
+
+    console.log(cart2)
+
+    var popStr = "";
+    popStr = popStr + "<h5> Here's the items you pick </h5><div class='mx-2 my-2'>";
+
+    /* for (let item in cart2){
+
+      popStr = popStr + `<p>Q${cart2[item][0]}</p>`
+      popStr = popStr + `<p>${cart2[item][1]}</p>`
+      popStr = popStr + `<p>${cart2[item][2]}</p>`
+      popStr = popStr + `<p>${cart2[item][3]}</p>`
+
+      //for (let item2 in cart2[item]){  
+      //}
+
+    popStr = popStr + '</div><div>'
+    } */
+
+    popStr = popStr + '</div>'
+
+    var i = 0;
+
+    for (var item in cart2){
+
+
+
+        popStr = popStr + `<div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="${cart2[item][2]}" class="img-fluid rounded-start p-2" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">${cart2[item][1]}</h5>
+                  <p class="card-text">${cart2[item][3]}.</p>
+                  <p class="card-text"><small class="text-muted">QTY:${cart2[item][0]}</small></p>
+                  <a href="/view/${item}"><button class='btn btn-light'>View</button></a>
+                </div>
+              </div>
+            </div>
+          </div>`
+
+        i = i+1;
+    }
+
+    popStr = popStr + "</div>" 
+
+    document.getElementById('tingoo').innerHTML=popStr;
+
+    function clrCart(){
+      localStorage.clear()
+      location.reload()
+    }
+
+</script>
+
+{% endblock js %}
